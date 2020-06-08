@@ -34,7 +34,7 @@ namespace EdTemporal.Data {
 
             var db = DatabaseConfiguration.Build()
                  .UsingConnectionString(connStr)
-                 .UsingProvider<PostgreSQLDatabaseProvider>()
+                 .UsingProvider<MySqlDatabaseProvider>()
                  .UsingDefaultMapper<ConventionMapper>(m => {
                      m.InflectTableName = (inflector, s) => inflector.Pluralise(inflector.Underscore(s));
                      m.InflectColumnName = (inflector, s) => inflector.Underscore(s);

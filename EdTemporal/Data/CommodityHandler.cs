@@ -65,8 +65,8 @@ namespace EdTemporal.Data {
                 Logger.LogInformation($"New categories that need added: {missingCategories.Count()}");
                 
                 foreach (var x in missingCategories) {
-                    var cc = new DbCommodityCategory { Id = x.Id, Name = x.Name };
-                    db.Save(cc);
+                    var cc = new DbCommodityCategory { Id = x.Id, Name = x.Name, CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now };
+                    db.Insert(cc);
 
                     results.Add(cc);
                 }
