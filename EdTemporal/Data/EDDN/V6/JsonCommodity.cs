@@ -17,22 +17,22 @@ namespace EdTemporal.Data.EDDN.V6 {
         public long CategoryId { get; set; }
 
         [JsonProperty("average_price")]
-        public long AveragePrice { get; set; }
+        public long? AveragePrice { get; set; }
 
         [JsonProperty("is_rare")]
         public long IsRare { get; set; }
 
         [JsonProperty("max_buy_price")]
-        public long MaxBuyPrice { get; set; }
+        public long? MaxBuyPrice { get; set; }
 
         [JsonProperty("max_sell_price")]
-        public long MaxSellPrice { get; set; }
+        public long? MaxSellPrice { get; set; }
 
         [JsonProperty("min_buy_price")]
-        public long MinBuyPrice { get; set; }
+        public long? MinBuyPrice { get; set; }
 
         [JsonProperty("min_sell_price")]
-        public long MinSellPrice { get; set; }
+        public long? MinSellPrice { get; set; }
 
         [JsonProperty("buy_price_lower_average")]
         public long BuyPriceLowerAverage { get; set; }
