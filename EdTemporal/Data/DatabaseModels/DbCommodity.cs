@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EdTemporal.Data.DatabaseModels {
     [TableName("commodity")]
-    [PrimaryKey("id")]
+    [PrimaryKey(primaryKey: "id", AutoIncrement = false)]
 
     public class DbCommodity {
 

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EdTemporal.Data.DatabaseModels {
     [TableName("commodity_category")]
-    [PrimaryKey("id")]
+    [PrimaryKey(primaryKey: "id", AutoIncrement = false)]
     public class DbCommodityCategory {
         [Column("id")]
         public int Id { get; set; }
