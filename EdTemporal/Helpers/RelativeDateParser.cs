@@ -45,7 +45,7 @@ namespace EdTemporal.Helpers {
         /// Ex: "2 minutes"
         /// Ex: "3 months 5 days 1 hour ago"
         /// </summary>
-        private readonly Regex _completeRelativeRegex = new Regex(@"^(?: *(\d) *(" + ValidUnits + ")s?)+( +ago)?$");
+        private readonly Regex _completeRelativeRegex = new Regex(@"^(?: *(\d{1,2}) *(" + ValidUnits + ")s?)+( +ago)?$");
 
         public DateTime Parse(string input) {
             // Remove the case and trim spaces.
