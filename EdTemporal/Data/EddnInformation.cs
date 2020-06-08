@@ -1,16 +1,24 @@
 ﻿using AngleSharp;
 using AngleSharp.Dom;
+using AngleSharp.Html.Parser;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+
+using Org.BouncyCastle.Asn1;
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace EdTemporal.Data {
     class EddnInformation {
+        static readonly Regex whitespaceTrimmer = new Regex(@"\s\s+", RegexOptions.Compiled);
+
+
         ILogger Logger { get; } = ApplicationLogging.CreateLogger<EddnInformation>();
 
 
@@ -20,27 +28,37 @@ namespace EdTemporal.Data {
 
         public EddnInformation() {
             using (Logger.BeginScope($"=>{ nameof(EddnInformation) }")) {
+                Logger.LogInformation("Downloading EDDN dates from API webpage...");
 
-                var config = Configuration.Default.WithDefaultLoader();
-                var address = "https://eddb.io/api";
-                var context = BrowsingContext.New(config);
-                var documentTask = context.OpenAsync(address);
-                documentTask.Wait();
+                WebClient wc = new WebClient();
+                string apiContent = wc.DownloadString("https://eddb.io/api");
 
-                var document = documentTask.Result;
+                var parser = new HtmlParser();
+                var document = parser.ParseDocument(apiContent);
+
+                Logger.LogInformation("Parsing dates.");
 
                 // Queries
-                var qryPricesUpdatedAt = getDateFromTable(document, "listings.csv", 3).Replace("\n", "");
-                var qryCommsUpdatedAt = getDateFromTable(document, "commodities.json", 2).Replace("\n", "");
+                var qryPricesUpdatedAt = whitespaceTrimmer.Replace(getDateFromTable(document, "listings.csv", 4).Replace("\n", ""), "").Split(new string[] { "| " }, StringSplitOptions.None)[1];
+                var qryCommsUpdatedAt = whitespaceTrimmer.Replace(getDateFromTable(document, "commodities.json", 2).Replace("\n", ""), "").Split(new string[] { "| " }, StringSplitOptions.None)[1];
 
+                // Get the dates
+                var relDateParser = new EdTemporal.Helpers.RelativeDateParser();
 
+                DateTime datePrices = relDateParser.Parse(qryPricesUpdatedAt);
+                DateTime dateComms = relDateParser.Parse(qryCommsUpdatedAt);
+
+                PricesUpdatedAt = datePrices;
+                Commodities = dateComms;
             }
         }
 
 
         private string getDateFromTable(IDocument doc, string file, int column) {
-            var query = $"table.table-publicArchive > tbody > tr:contains(\"{file}\") > td:nth-child({column}) > div'";
-            return doc.QuerySelector(query).TextContent;
+            var query = string.Format("table.table-publicArchive > tbody > tr:contains(\"{0}\") > td:nth-child({1}) > div", file, column);
+            var res = doc.QuerySelector(query);
+
+            return res?.TextContent;
         }
     }
 }
