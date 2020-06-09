@@ -17,6 +17,9 @@ namespace EdTemporal {
     /// Interaction logic for App.xaml
     /// </summary>
     public partial class App : Application {
+        ILogger Logger { get; } = ApplicationLogging.CreateLogger<App>();
+
+
         public ServiceProvider ServiceProvider;
         
         private void Application_Startup(object sender, StartupEventArgs e) {
@@ -27,8 +30,8 @@ namespace EdTemporal {
 
             // -----
 
-            Data.CommodityHandler dataHandler = new Data.CommodityHandler();
-            dataHandler.UpdateAllCommodities();
+            Logger.LogInformation("===---===---===---===---===---===---===---===---===");
+            Logger.LogInformation("Application started.");
         }
 
 

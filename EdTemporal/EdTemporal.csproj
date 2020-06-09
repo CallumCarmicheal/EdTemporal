@@ -44,6 +44,9 @@
     <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
+    <Reference Include="ControlzEx, Version=4.0.0.0, Culture=neutral, PublicKeyToken=69f1c32f803d307e, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.4.3.0\lib\net462\ControlzEx.dll</HintPath>
+    </Reference>
     <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
@@ -55,6 +58,9 @@
     </Reference>
     <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=2.0.0.0, Culture=neutral, PublicKeyToken=51482d6f650b2b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.2.0.1\lib\net47\MahApps.Metro.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
@@ -95,6 +101,9 @@
     <Reference Include="Microsoft.Extensions.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Primitives.5.0.0-preview.4.20251.6\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.0.20\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
@@ -103,6 +112,27 @@
     </Reference>
     <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
       <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.2.5.0\lib\net46\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Extensions.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.Extensions.Logging.2.0.2\lib\net461\Serilog.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Extensions.Logging.File, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.Extensions.Logging.File.2.0.0\lib\net461\Serilog.Extensions.Logging.File.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Formatting.Compact, Version=1.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.Formatting.Compact.1.0.0\lib\net45\Serilog.Formatting.Compact.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.Async, Version=1.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.Sinks.Async.1.1.0\lib\net45\Serilog.Sinks.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.File, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.Sinks.File.3.2.0\lib\net45\Serilog.Sinks.File.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.RollingFile, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.Sinks.RollingFile.3.3.0\lib\net45\Serilog.Sinks.RollingFile.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -136,6 +166,8 @@
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -160,6 +192,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UserInterface\Converters\NegatingConverter.cs" />
+    <Compile Include="UserInterface\Utilities\Ticker.cs" />
+    <Compile Include="UserInterface\ViewModel\ControlMarketDisplayItem.cs" />
+    <Compile Include="UserInterface\ViewModel\ViewModelBase.cs" />
+    <Compile Include="UserInterface\ViewModel\WindowTestScrollerViewModel.cs" />
+    <Compile Include="UserInterface\Windows\TestScroller.xaml.cs">
+      <DependentUpon>TestScroller.xaml</DependentUpon>
+    </Compile>
+    <Page Include="UserInterface\Controls\MarketDisplayItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserInterface\Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -168,14 +212,16 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Data\DatabaseModels\DbEddnUpdateLog.cs" />
     <Compile Include="Data\DBConnection.cs" />
     <Compile Include="Data\DatabaseModels\DbCommodity.cs" />
     <Compile Include="Data\DatabaseModels\DbCommodityCategory.cs" />
-    <Compile Include="Data\DatabaseModels\DbCommodityEddnPrices.cs" />
+    <Compile Include="Data\DatabaseModels\DbCommodityEddnPrice.cs" />
     <Compile Include="Data\CommodityHandler.cs" />
     <Compile Include="Data\EddnInformation.cs" />
     <Compile Include="Data\EDDN\V6\JsonCommodity.cs" />
     <Compile Include="Data\EDDN\V6\JsonCommodityCategory.cs" />
+    <Compile Include="Data\InaraPriceScraper.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="ApplicationLogging.cs" />
     <Compile Include="Helpers\RelativeDateParser.cs" />
@@ -185,10 +231,17 @@
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PetaPoco.cs" />
+    <Compile Include="UserInterface\Controls\MarketDisplayItem.xaml.cs">
+      <DependentUpon>MarketDisplayItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserInterface\Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UserInterface\Windows\TestScroller.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -225,6 +278,9 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Database.cs</LastGenOutput>
     </Content>
+    <EmbeddedResource Include="Resources\led_matrix.png" />
+    <None Include="Resources\led_matrix_2.png" />
+    <None Include="Resources\led_matrix.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

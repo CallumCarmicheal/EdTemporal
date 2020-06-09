@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EdTemporal.UserInterface.ViewModel;
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,8 +20,15 @@ namespace EdTemporal.UserInterface.Windows {
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window {
+
+
+
         public MainWindow() {
-            InitializeComponent();
+            try {
+                InitializeComponent();
+            } catch (Exception ex) {
+                int x = 0;
+            }
         }
     }
 }

@@ -5,8 +5,84 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EdTemporal"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="130" Width="800">
     <Grid>
+        <Grid Background="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70" />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+            
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*" MaxWidth="110" />
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        
+                        <Label FontFamily="Consolas" FontSize="18pt" Foreground="LightBlue" Content="Low Tempeture Diamonds" 
+                               Grid.Column="0" Grid.ColumnSpan="2"/>
+                        <Label Grid.Row="1" FontFamily="Consolas" FontSize="12pt" Foreground="White" Content="1,512,154 cr"/>
+
+                        <Label Grid.Row="1" Grid.Column="2" 
+                               FontFamily="Consolas" FontSize="14pt" HorizontalAlignment="Right"
+                               Foreground="Green">6.2% ▲ </Label>
+                    </Grid>
+                </StackPanel>
+
+                <Rectangle HorizontalAlignment="Stretch" Fill="White" Width="4" Margin="10,11"/>
+                
+                <StackPanel Orientation="Vertical">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="*" MaxWidth="110" />
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <Label FontFamily="Consolas" FontSize="18pt" Foreground="LightBlue" Content="Void Opals" 
+                               Grid.Column="0" Grid.ColumnSpan="2"/>
+                        <Label Grid.Row="1" FontFamily="Consolas" FontSize="12pt" Foreground="White" Content="906,054 cr"/>
+
+                        <Label Grid.Row="1" Grid.Column="2" 
+                               FontFamily="Consolas" FontSize="14pt" HorizontalAlignment="Right"
+                               Foreground="Red">4% ▼</Label>
+                    </Grid>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="1">
+                <Label FontFamily="Consolas" FontSize="12pt" Foreground="Orange">
+                    WITCH HEAD SYSTEM DESIGNATIONS UPDATED
+                </Label>
+                <Label FontFamily="Consolas" FontSize="12pt" Foreground="White">
+                    Universal Cartographics has updated the names of fifteen systems in the Witch Head enclave.
+                </Label>
+            </StackPanel>
+        </Grid>
         
+        <!--<Grid Width="auto" Height="auto">
+            <Grid.Background>
+                <ImageBrush ImageSource="led_matrix.png" Stretch="Fill" TileMode="Tile" Opacity="0.3">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleY="0.05" ScaleX="0.05"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Grid.Background>
+        </Grid>-->
     </Grid>
 </Window>
