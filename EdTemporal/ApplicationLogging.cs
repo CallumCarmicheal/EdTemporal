@@ -8,7 +8,11 @@ using Microsoft.Extensions.Logging;
 
 namespace EdTemporal {
     public static class ApplicationLogging {
-        public static ILoggerFactory LoggerFactory { get; } = Microsoft.Extensions.Logging.LoggerFactory.Create(builder => builder.AddConsole());
+        public static ILoggerFactory LoggerFactory { get; } = Microsoft.Extensions.Logging.LoggerFactory.Create( 
+            builder => builder
+                .AddConsole()
+                .AddFile("Logs/EdTemporal-{Date}.txt"));
+        
         public static ILogger CreateLogger<T>() =>
           LoggerFactory.CreateLogger<T>();
     }
