@@ -24,7 +24,7 @@ namespace EdTemporal.Data {
 
 
         public DateTime PricesUpdatedAt { get; set; }
-        public DateTime Commodities { get; set; }
+        public DateTime CommoditiesUpdatedAt { get; set; }
 
         public EddnInformation() {
             using (Logger.BeginScope($"=>{ nameof(EddnInformation) }")) {
@@ -49,7 +49,7 @@ namespace EdTemporal.Data {
                 DateTime dateComms = relDateParser.Parse(qryCommsUpdatedAt);
 
                 PricesUpdatedAt = datePrices;
-                Commodities = dateComms;
+                CommoditiesUpdatedAt = dateComms;
             }
         }
 
