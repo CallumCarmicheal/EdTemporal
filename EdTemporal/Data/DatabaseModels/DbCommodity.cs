@@ -12,13 +12,13 @@ namespace EdTemporal.Data.DatabaseModels {
     public class DbCommodity {
 
         [Column("id")]
-        public int Id { get; set; }
+        public long Id { get; set; }
 
         [Column("name")]
         public string Name { get; set; }
 
         [Column("category_id")]
-        public int CategoryId { get; set; }
+        public long CategoryId { get; set; }
 
         [Column("is_rare")]
         public bool IsRare { get; set; }
@@ -27,7 +27,7 @@ namespace EdTemporal.Data.DatabaseModels {
         public bool IsNonMarketable { get; set; }
 
         [Column("ed_id")]
-        public int EdId { get; set; }
+        public long EdId { get; set; }
 
         [Column("created_at")]
         public DateTime CreatedAt { get; set; }
@@ -42,6 +42,6 @@ namespace EdTemporal.Data.DatabaseModels {
         public DbCommodityCategory Category { get; set; } = null;
 
         [Ignore]
-        public IEnumerable<DbCommodityEddnPrices> Prices { get; set; } = null;
+        public IEnumerable<DbCommodityEddnPrice> Prices { get; set; } = null;
     }
 }

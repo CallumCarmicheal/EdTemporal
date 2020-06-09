@@ -11,7 +11,7 @@ namespace EdTemporal.Data.DatabaseModels {
     [PrimaryKey(primaryKey: "id", AutoIncrement = false)]
     public class DbCommodityCategory {
         [Column("id")]
-        public int Id { get; set; }
+        public long Id { get; set; }
 
         [Column("name")]
         public string Name { get; set; }
