@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace EdTemporal.Data.DatabaseModels {
     [TableName("commodity_eddn_prices")]
     [PrimaryKey(primaryKey: "id", AutoIncrement = true)]
-    public class DbCommodityEddnPrices {
+    public class DbCommodityEddnPrice {
         [Column("id")]
         public long Id { get; set; }
         
@@ -40,6 +40,8 @@ namespace EdTemporal.Data.DatabaseModels {
         [Column("created_at")]
         public DateTime CreatedAt { get; set; }
 
+        [Column("inserted_at")]
+        public DateTime InsertedAt { get; set; }
 
         // ==============================
         // Relationship
